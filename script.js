@@ -1,6 +1,6 @@
 const config = {
-    homeURL: "../home.html",
-    finishURL: "./finish.html"
+    homeURL: "../../index.html",
+    finishURL: "../finish/index.html"
 };
 
 const questionContainer = document.getElementsByClassName('question-container')[0];
