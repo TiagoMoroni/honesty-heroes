@@ -147,7 +147,7 @@ function showQuestion() {
 function showAnswers() {
     answersContainer.innerHTML = '';
     currentQuestion.answers.forEach(answer => {
-        const answerButton = document.createElement('div');
+        const answerButton = document.createElement('button');
         answerButton.classList.add("answer")
         answerButton.innerText = answer.answer;
         answerButton.addEventListener('click', () => {
