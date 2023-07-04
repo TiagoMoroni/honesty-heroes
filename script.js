@@ -1,5 +1,5 @@
 const config = {
-    homeURL: "./home.html",
+    homeURL: "../home.html",
     finishURL: "./finish.html"
 };
 
