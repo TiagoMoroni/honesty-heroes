@@ -1,0 +1,21 @@
+const config: Define um objeto de configuração que contém URLs para a página inicial e a página de conclusão do questionário.
+
+const questionContainer e answersContainer: Seleciona os elementos HTML com as classes 'question-container' e 'answers-container' para exibir as perguntas e respostas do questionário.
+
+let currentSetOfQuestions, currentQuestion, points: Variáveis que armazenam o conjunto atual de perguntas, a pergunta atual e os pontos acumulados.
+
+const questions: É uma matriz aninhada que armazena conjuntos de perguntas e respostas. Cada conjunto de perguntas contém um array de objetos que representam uma pergunta, suas respostas e informações relacionadas.
+
+function onInit(): É uma função de inicialização que é chamada quando a página é carregada. Ela extrai o índice do conjunto de perguntas da URL (parâmetro 'faixaetaria') e configura o conjunto de perguntas atual, a pergunta atual e exibe a pergunta e respostas na página.
+
+function showQuestion(): Atualiza o conteúdo do elemento 'questionContainer' com a pergunta atual.
+
+function showAnswers(): Limpa o conteúdo do elemento 'answersContainer' e cria botões para cada resposta da pergunta atual. Cada botão de resposta é associado a um manipulador de eventos que atualiza os pontos acumulados, avança para a próxima pergunta (se houver) e exibe a próxima pergunta e respostas. Se não houver próxima pergunta, redireciona para a página de conclusão, passando os pontos acumulados como parâmetro.
+
+function setCurrentSetOfQuestions(index): Define o conjunto de perguntas atual com base no índice fornecido.
+
+function setCurrentQuestion(id): Define a pergunta atual com base no ID fornecido.
+
+function findQuestionById(id): Retorna o objeto de pergunta correspondente ao ID fornecido.
+
+function voltar(): Redireciona para a página inicial (configurada no objeto de configuração).

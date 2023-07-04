@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pontos Finais</h1>
+    <div class="points-container"></div>
+    <button onclick="window.location.replace('./home.html')">Voltar</button>
+</body>
+<script>
+    const totalPoints = new URLSearchParams(window.location.search).get('pontos');
+    const pointsContainer = document.getElementsByClassName("points-container")[0];
+    pointsContainer.innerHTML = totalPoints
+</script>
+</html>
