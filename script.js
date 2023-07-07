@@ -1,13 +1,14 @@
 const config = {
   homeURL: "../../index.html",
   finishURL: "../finish/index.html",
+  pointAddiction: 10
 };
 
+
+const pointsNumber = document.getElementsByClassName("question-points-counter")[0];
 const questionNumber = document.getElementsByClassName("question-number")[0];
-const questionContainer =
-  document.getElementsByClassName("question-container")[0];
-const answersContainer =
-  document.getElementsByClassName("answers-container")[0];
+const questionContainer = document.getElementsByClassName("question-container")[0];
+const answersContainer = document.getElementsByClassName("answers-container")[0];
 
 let currentSetOfQuestions;
 let currentQuestion;
@@ -273,22 +274,25 @@ onInit();
 // Elas manipulam os elementos do DOM, preenchendo-os com o conteúdo das perguntas e respostas.
 // Você pode personalizar o estilo e o formato da exibição das perguntas e respostas nesses métodos, para atender aos requisitos de design.
 
-function showQuestion() {
+function showQuestion(points = 0) {
   questionNumber.innerHTML = "Pergunta Nº" + currentQuestion.id;
+  pointsNumber.innerHTML = `${points}/${currentSetOfQuestions.length * config.pointAddiction}`;
   questionContainer.innerHTML = currentQuestion.question;
 }
 
 function showAnswers() {
   answersContainer.innerHTML = "";
+
   currentQuestion.answers.forEach((answer) => {
     const answerButton = document.createElement("button");
     answerButton.classList.add("answer");
     answerButton.innerText = answer.answer;
     answerButton.addEventListener("click", () => {
       points += answer.points;
+      
       if (answer.nextQuestionId) {
         setCurrentQuestion(answer.nextQuestionId);
-        showQuestion();
+        showQuestion(points);
         showAnswers();
       } else {
         window.location.replace(config.finishURL + "?pontos=" + points);

@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-  </head>
-  <body>
-    <div class="quiz-main">
-      <div class="quiz-header">
-        <button class="back-btn" onclick="voltar()">
-          <span class="material-symbols-rounded back-arrow"> arrow_back </span
-          >Voltar
-        </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+  <div class="quiz-main">
+    <div class="quiz-header">
+      <button class="back-btn" onclick="voltar()">
+        <span class="material-symbols-rounded back-arrow"> arrow_back </span>Voltar
+      </button>
+      <div class="question-counter-container">
         <div class="question-number"></div>
+        <div class="question-points-counter">0/0</div>
       </div>
-
-      <div class="quiz-content">
-        <div class="question">
-          <div class="question-img"></div>
-          <div class="question-container"></div>
-        </div>
-        <div class="answers-container"></div>
-      </div>
-
-      <script src="../../script.js"></script>
     </div>
-  </body>
+
+    <div class="quiz-content">
+      <div class="question">
+        <div class="question-img"></div>
+        <div class="question-container"></div>
+      </div>
+      <div class="answers-container"></div>
+    </div>
+
+    <script src="../../script.js"></script>
+  </div>
+</body>
+
 </html>
