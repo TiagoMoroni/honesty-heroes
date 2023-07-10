@@ -54,7 +54,7 @@ const questions = [
     },
     {
       "id": 5,
-      "question": "Você e sua amiga estão brincando de casinha e ela quer ser sempre a mãe, enquanto você quer ser a filha. O que você poderia fazer para resolver o conflito?",
+      "question": "Você e sua amiga estão brincando de casinha e ela quer ser sempre a mamãe e dessa vez você também quer. O que você poderia fazer para resolver o conflito?",
       "answers": [
         { "answer": "Conversar com sua amiga e encontrar uma solução em que ambas possam ser mãe e filha em momentos diferentes", "nextQuestionId": 6, "points": config.pointAddiction },
         { "answer": "Gritar e brigar com sua amiga", "nextQuestionId": 6, "points": 0 },
