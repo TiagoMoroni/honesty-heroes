@@ -9,6 +9,7 @@ const pointsNumber = document.getElementsByClassName("question-points-counter")[
 const questionNumber = document.getElementsByClassName("question-number")[0];
 const questionContainer = document.getElementsByClassName("question-container")[0];
 const answersContainer = document.getElementsByClassName("answers-container")[0];
+const questionImage = document.getElementsByClassName("question-img")[0];
 
 let currentSetOfQuestions;
 let currentQuestion;
@@ -18,6 +19,7 @@ const questions = [
   [
     {
       "id": 1,
+      "img": "../../img/question/1_1.png",
       "question": "Imagine que você encontrou um brinquedo perdido no parquinho. O que você deveria fazer?",
       "answers": [
         { "answer": "Entregar o brinquedo para o responsável do parquinho", "nextQuestionId": 2, "points": config.pointAddiction },
@@ -27,6 +29,7 @@ const questions = [
     },
     {
       "id": 2,
+      "img": "../../img/question/1_2.png",
       "question": "Imagine que você tem um amigo novo na escola que está com medo de ir ao banheiro sozinho. O que você poderia fazer para ajudá-lo?",
       "answers": [
         { "answer": "Acompanhá-lo até o banheiro e esperar do lado de fora", "nextQuestionId": 3, "points": config.pointAddiction },
@@ -36,6 +39,7 @@ const questions = [
     },
     {
       "id": 3,
+      "img": "../../img/question/1_3.png",
       "question": "Você e seu irmão estão brincando juntos, mas ele começa a trapacear no jogo. O que você deveria fazer?",
       "answers": [
         { "answer": "Conversar com seu irmão sobre a importância de ser honesto", "nextQuestionId": 4, "points": config.pointAddiction },
@@ -45,6 +49,7 @@ const questions = [
     },
     {
       "id": 4,
+      "img": "../../img/question/1_4.png",
       "question": "Imagine que seu amigo te emprestou um livro muito especial, mas você acidentalmente o danificou. O que você deveria fazer?",
       "answers": [
         { "answer": "Esconder o livro e fingir que nada aconteceu", "nextQuestionId": 5, "points": 0 },
@@ -54,6 +59,7 @@ const questions = [
     },
     {
       "id": 5,
+      "img": "../../img/question/1_5.png",
       "question": "Você e sua amiga estão brincando de casinha e ela quer ser sempre a mamãe e dessa vez você também quer. O que você poderia fazer para resolver o conflito?",
       "answers": [
         { "answer": "Conversar com sua amiga e encontrar uma solução em que ambas possam ser mãe e filha em momentos diferentes", "nextQuestionId": 6, "points": config.pointAddiction },
@@ -63,6 +69,7 @@ const questions = [
     },
     {
       "id": 6,
+      "img": "../../img/question/1_6.png",
       "question": "Você está na festa de aniversário de um amigo e vê outra criança pegando um pedaço extra de bolo sem permissão. O que você poderia fazer?",
       "answers": [
         { "answer": "Contar para o responsável da festa sobre o que viu", "nextQuestionId": 7, "points": config.pointAddiction },
@@ -72,6 +79,7 @@ const questions = [
     },
     {
       "id": 7,
+      "img": "../../img/question/1_7.png",
       "question": "Seu irmão mais novo acidentalmente quebrou o seu brinquedo favorito. O que você poderia fazer?",
       "answers": [
         { "answer": "Ficar bravo com ele e dizer coisas ruins", "nextQuestionId": 8, "points": 0 },
@@ -81,6 +89,7 @@ const questions = [
     },
     {
       "id": 8,
+      "img": "../..//img/question/1_8.png",
       "question": "Você está em uma loja com sua família e vê uma criança pegando uma guloseima da prateleira e colocando no bolso. O que você poderia fazer?",
       "answers": [
         { "answer": "Contar para o adulto responsável pela criança ou para um funcionário da loja", "nextQuestionId": 9, "points": config.pointAddiction },
@@ -90,6 +99,7 @@ const questions = [
     },
     {
       "id": 9,
+      "img": "../../img/question/1_9.png",
       "question": "Seu amigo está se sentindo excluído porque os outros não o convidaram para brincar. O que você poderia fazer para ajudá-lo?",
       "answers": [
         { "answer": "Convidá-lo para brincar com você e seus amigos", "nextQuestionId": null, "points": config.pointAddiction },
@@ -102,6 +112,7 @@ const questions = [
   [
     {
       "id": 1,
+      "img": "../../img/question/2_1.png",
       "question": "Seu amigo está triste porque alguém o insultou. O que você poderia fazer para ajudá-lo?",
       "answers": [
         { "answer": "Conversar com ele sobre como ele se sente e oferecer apoio emocional", "nextQuestionId": 2, "points": config.pointAddiction },
@@ -111,6 +122,7 @@ const questions = [
     },
     {
       "id": 2,
+      "img": "../../img/question/2_2.png",
       "question": "Você encontrou uma carteira perdida no parquinho. O que você deveria fazer?",
       "answers": [
         { "answer": "Entregar a carteira para um adulto responsável", "nextQuestionId": 3, "points": config.pointAddiction },
@@ -120,6 +132,7 @@ const questions = [
     },
     {
       "id": 3,
+      "img": "../../img/question/2_3.png",
       "question": "Seu amigo está com ciúmes de outro amigo seu. O que você poderia fazer para ajudar a lidar com os ciúmes?",
       "answers": [
         { "answer": "Conversar com seu amigo sobre como ele se sente e mostrar que você valoriza a amizade dele", "nextQuestionId": 4, "points": config.pointAddiction },
@@ -129,6 +142,7 @@ const questions = [
     },
     {
       "id": 4,
+      "img": "../../img/question/2_4.png",
       "question": "Você está jogando futebol com seus amigos e um deles faz um gol contra acidentalmente. O que você deveria fazer?",
       "answers": [
         { "answer": "Confortar seu amigo, dizendo que foi apenas um erro e que todos cometem erros às vezes", "nextQuestionId": 5, "points": config.pointAddiction },
@@ -138,6 +152,7 @@ const questions = [
     },
     {
       "id": 5,
+      "img": "../../img/question/2_5.png",
       "question": "Seu amigo está com medo de nadar em uma piscina funda. O que você poderia fazer para ajudá-lo?",
       "answers": [
         { "answer": "Acompanhar seu amigo, incentivá-lo e oferecer apoio durante a experiência", "nextQuestionId": 6, "points": config.pointAddiction },
@@ -147,6 +162,7 @@ const questions = [
     },
     {
       "id": 6,
+      "img": "../../img/question/2_6.png",
       "question": "Você está participando de uma competição de desenho na escola. Seu amigo fez um desenho incrível, mas o seu não é tão bom. O que você poderia fazer?",
       "answers": [
         { "answer": "Parabenizar seu amigo pelo ótimo desenho e continuar fazendo o seu melhor", "nextQuestionId": 7, "points": config.pointAddiction },
@@ -156,6 +172,7 @@ const questions = [
     },
     {
       "id": 7,
+      "img": "../../img/question/2_7.png",
       "question": "Seu amigo te emprestou um livro que você já leu antes. O que você deveria fazer?",
       "answers": [
         { "answer": "Agradecer ao seu amigo pelo empréstimo e cuidar bem do livro", "nextQuestionId": undefined, "points": config.pointAddiction },
@@ -168,6 +185,7 @@ const questions = [
   [
     {
       "id": 1,
+      "img": "../../img/question/3_1.png",
       "question": "Como você se sente quando alguém é gentil com você?",
       "answers": [
         { "answer": "Alegre e grato.", "nextQuestionId": 2, "points": config.pointAddiction },
@@ -177,6 +195,7 @@ const questions = [
     },
     {
       "id": 2,
+      "img": "../../img/question/3_2.png",
       "question": "O que você pode fazer para ajudar um amigo que está triste?",
       "answers": [
         { "answer": "Ignorar e evitar o amigo triste.", "nextQuestionId": 3, "points": 0 },
@@ -186,6 +205,7 @@ const questions = [
     },
     {
       "id": 3,
+      "img": "../../img/question/3_3.png",
       "question": "O que você acha que significa ser honesto?",
       "answers": [
         { "answer": "Falar a verdade e ser sincero.", "nextQuestionId": 4, "points": config.pointAddiction },
@@ -195,6 +215,7 @@ const questions = [
     },
     {
       "id": 4,
+      "img": "../../img/question/3_4.png",
       "question": "Como você pode expressar gratidão por algo que alguém fez por você?",
       "answers": [
         { "answer": "Agradecendo com palavras e um sorriso.", "nextQuestionId": 5, "points": config.pointAddiction },
@@ -204,6 +225,7 @@ const questions = [
     },
     {
       "id": 5,
+      "img": "../../img/question/3_5.png",
       "question": "O que você pode fazer quando está com raiva para se acalmar?",
       "answers": [
         { "answer": "Gritar e quebrar objetos.", "nextQuestionId": 6, "points": 0 },
@@ -213,6 +235,7 @@ const questions = [
     },
     {
       "id": 6,
+      "img": "../../img/question/3_6.png",
       "question": "Por que é importante ouvir os sentimentos dos outros?",
       "answers": [
         { "answer": "Para entender como os outros se sentem e ser mais empático.", "nextQuestionId": 7, "points": config.pointAddiction },
@@ -222,6 +245,7 @@ const questions = [
     },
     {
       "id": 7,
+      "img": "../../img/question/3_7.png",
       "question": "O que você pode fazer para se sentir melhor quando está triste?",
       "answers": [
         { "answer": "Ficar sozinho e não falar com ninguém.", "nextQuestionId": 8, "points": 0 },
@@ -231,6 +255,7 @@ const questions = [
     },
     {
       "id": 8,
+      "img": "../../img/question/3_8.png",
       "question": "Por que é importante dizer a verdade, mesmo quando é difícil?",
       "answers": [
         { "answer": "Porque a verdade é sempre a coisa certa a fazer.", "nextQuestionId": 9, "points": config.pointAddiction },
@@ -240,6 +265,7 @@ const questions = [
     },
     {
       "id": 9,
+      "img": "../../img/question/3_9.png",
       "question": "Como você pode demonstrar empatia por alguém que está passando por um momento difícil?",
       "answers": [
         { "answer": "Ignorando e não se importando com a situação do outro.", "nextQuestionId": config.pointAddiction, "points": 0 },
@@ -249,6 +275,7 @@ const questions = [
     },
     {
       "id": 10,
+      "img": "../../img/question/3_10.png",
       "question": "O que você pode fazer quando alguém está com medo?",
       "answers": [
         { "answer": "Rir e zombar da pessoa por ser medrosa.", "nextQuestionId": undefined, "points": 0 },
@@ -276,6 +303,7 @@ onInit();
 
 function showQuestion(points = 0) {
   questionNumber.innerHTML = "Pergunta Nº" + currentQuestion.id;
+  questionImage.src= currentQuestion.img;
   pointsNumber.innerHTML = `${points}/${currentSetOfQuestions.length * config.pointAddiction}`;
   questionContainer.innerHTML = currentQuestion.question;
 }
