@@ -173,6 +173,7 @@ body{
     }
     to{
         transform: translateY(0);
+        letter-spacing: 0px;
     }
 }
 
@@ -193,6 +194,7 @@ body{
         padding: 0;
     }
     to{
+        letter-spacing: 0px;
     }
 }
 
