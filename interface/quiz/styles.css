@@ -195,6 +195,9 @@ body{
             gap: 2rem;
             margin: 1rem 0rem;
         }
+    .question-img{
+        width: 50%;
+    }
     .quiz-main{
         margin: 2rem 20rem;
     }
